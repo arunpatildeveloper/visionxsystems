@@ -1655,3 +1655,91 @@ p { color: var(--text-2); line-height: 1.75; }
   .hv-node { display: none; }
   .about-diagram { display: none; }
 }
+
+/* ══════════════════════════════════════════════════
+   MOBILE COMPONENT FIXES
+══════════════════════════════════════════════════ */
+
+/* Prototype chrome — prevent overflow */
+@media (max-width: 768px) {
+  .proto-chrome {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px 14px;
+    min-height: unset;
+  }
+  .proto-chrome__dots { display: none; }
+  .proto-chrome__title { font-size: 0.72rem; flex: 1; }
+  .proto-chrome__badge {
+    font-size: 0.58rem;
+    padding: 2px 7px;
+    white-space: normal;
+    line-height: 1.4;
+    max-width: 100%;
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Prototype layout — full width, sidebar scrollable */
+  .proto-layout { grid-template-columns: 1fr; }
+  .proto-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 8px 0;
+  }
+  .ps-group { margin-bottom: 0; }
+  .ps-label { font-size: 0.58rem; padding: 6px 12px 2px; }
+  .ps-item { padding: 6px 12px; font-size: 0.74rem; }
+  .ps-tag { display: none; }
+  .proto-main { padding: 16px; }
+
+  /* Threat web — replace with pill list on mobile */
+  .threat-web {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .tw-center {
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    margin-bottom: 4px;
+  }
+  .tw-node {
+    position: static;
+    transform: none;
+  }
+  .tw-node span {
+    font-size: 0.72rem;
+    padding: 6px 14px;
+  }
+  .tw-svg { display: none; }
+  .cyber__grid { grid-template-columns: 1fr; gap: 40px; }
+  .cyber__right { order: -1; }
+
+  /* Threat nodes — flow wrap */
+  .threat-web {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 0;
+  }
+  .tw-center {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+    order: -1;
+  }
+}
