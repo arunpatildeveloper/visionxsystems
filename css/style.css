@@ -256,13 +256,12 @@ p { color: var(--text-2); line-height: 1.75; }
   width: auto;
   display: block;
   border-radius: 8px;
-  transition: filter .3s var(--ease), box-shadow .3s var(--ease);
+  transition: filter .3s var(--ease);
+  mix-blend-mode: lighten;
   filter: drop-shadow(0 0 0px rgba(45,212,191,0));
 }
 .nav__logo:hover .nav__logo-wrap img {
-  filter: drop-shadow(0 0 10px rgba(45,212,191,0.45));
-  box-shadow: 0 0 0 1px rgba(45,212,191,0.2);
-  border-radius: 6px;
+  filter: drop-shadow(0 0 12px rgba(45,212,191,0.5));
 }
 .nav__wordmark { display: none; }
 /* Links */
@@ -334,6 +333,19 @@ p { color: var(--text-2); line-height: 1.75; }
 .nav__drawer ul { display: flex; flex-direction: column; gap: 18px; }
 .nav__drawer a { font-size: 1rem; color: var(--text-2); }
 .nav__drawer .nav__cta { align-self: flex-start; }
+.nav__drawer__bottom {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav__insta--drawer {
+  display: flex;
+  align-items: center;
+  color: var(--text-3);
+  transition: color .2s;
+  padding: 8px;
+}
+.nav__insta--drawer:hover { color: var(--teal); }
 
 /* ══════════════════════════════════════════════════
    HERO
@@ -1597,8 +1609,11 @@ p { color: var(--text-2); line-height: 1.75; }
   .container { padding: 0 20px; }
   section { padding: 80px 0; }
 
-  .nav__links, .nav__cta { display: none; }
+  .nav__links, .nav__cta, .nav__insta { display: none; }
   .nav__burger { display: flex; }
+  .nav__drawer { padding: 24px 20px; }
+  .nav__logo-wrap,
+  .nav__logo-wrap img { height: 44px; }
 
   .hero__body { gap: 48px; }
   .hero__btns { flex-direction: column; max-width: 280px; }
