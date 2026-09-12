@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionX — Digital Media Authenticity & Trust Research</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="#home" class="nav__logo">
+      <div class="nav__logo-wrap">
+        <img src="assets/visionx_logo.jpeg" alt="VisionX logo" />
+      </div>
+      <span class="nav__wordmark">VisionX</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="https://instagram.com/visionxsystems" target="_blank" rel="noopener noreferrer" class="nav__insta" aria-label="VisionX on Instagram">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="#overview" class="nav__cta">Explore Project</a>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="#overview" class="nav__cta">Explore Project</a>
+    <a href="https://instagram.com/visionxsystems" target="_blank" rel="noopener noreferrer" class="nav__insta nav__insta--drawer" aria-label="VisionX on Instagram">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+      @visionxsystems
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <canvas class="hero__canvas" id="heroCanvas"></canvas>
+  <div class="hero__noise"></div>
+  <div class="container hero__body">
+    <div class="hero__left">
+      <div class="hero__eyebrow fade-up">
+        <span class="dot dot--pulse"></span>
+        Academic Research Project — Final Year
+      </div>
+      <h1 class="hero__h1 fade-up fd2">
+        Trust<br />
+        <em>What</em><br />
+        You See.
+      </h1>
+      <p class="hero__desc fade-up fd3">
+        VisionX explores how artificial intelligence, digital forensics and
+        cybersecurity can help identify manipulated media and improve trust in
+        the digital world.
+      </p>
+      <p class="hero__tags fade-up fd4">
+        Deepfakes &nbsp;·&nbsp; Synthetic Media &nbsp;·&nbsp; Digital Identity &nbsp;·&nbsp; Authenticity
+      </p>
+      <div class="hero__btns fade-up fd5">
+        <a href="#overview" class="btn-primary">Explore VisionX</a>
+        <a href="#research" class="btn-ghost">Research Areas</a>
+      </div>
+    </div>
+
+    <div class="hero__right fade-up fd3">
+      <!-- Abstract media forensics visual -->
+      <div class="hv-frame">
+        <div class="hv-frame__corner hv-frame__corner--tl"></div>
+        <div class="hv-frame__corner hv-frame__corner--tr"></div>
+        <div class="hv-frame__corner hv-frame__corner--bl"></div>
+        <div class="hv-frame__corner hv-frame__corner--br"></div>
+        <div class="hv-scanline"></div>
+
+        <!-- Central waveform / fingerprint diagram -->
+        <div class="hv-center">
+          <svg class="hv-waveform" viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline class="wf-line" points="0,60 20,60 30,30 45,90 58,20 70,100 82,45 94,72 106,60 126,60 138,35 150,85 162,50 174,70 186,60 200,60 212,40 224,80 236,55 248,65 260,60 280,60 300,60 320,60"/>
+          </svg>
+          <div class="hv-label-row">
+            <span>Audio Signal</span>
+            <span class="hv-status">Examining</span>
+          </div>
+        </div>
+
+        <!-- Signal nodes -->
+        <div class="hv-nodes">
+          <div class="hv-node" style="--x:8%;--y:18%">
+            <div class="hv-node__pip"></div>
+            <span>Visual Layer</span>
+          </div>
+          <div class="hv-node hv-node--right" style="--x:92%;--y:22%">
+            <div class="hv-node__pip"></div>
+            <span>Metadata</span>
+          </div>
+          <div class="hv-node" style="--x:6%;--y:72%">
+            <div class="hv-node__pip hv-node__pip--warn"></div>
+            <span>Frame Delta</span>
+          </div>
+          <div class="hv-node hv-node--right" style="--x:94%;--y:68%">
+            <div class="hv-node__pip"></div>
+            <span>Source Hash</span>
+          </div>
+        </div>
+
+        <!-- Bottom metadata strip -->
+        <div class="hv-meta">
+          <span class="hv-meta__item">RES <b>—</b></span>
+          <span class="hv-meta__item">FPS <b>—</b></span>
+          <span class="hv-meta__item">HASH <b>—</b></span>
+          <span class="hv-meta__badge">ANALYSIS CONCEPT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <div class="hero__scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OVERVIEW STRIP
+══════════════════════════════════════════════ -->
+<div class="strip" id="overview">
+  <div class="container strip__inner">
+    <span class="strip__label">The Problem Space</span>
+    <p class="strip__text">Generative AI has made synthetic media indistinguishable from real. Proving authenticity is now as hard as detecting fakery.</p>
+    <span class="strip__label strip__label--right">Digital Media Authenticity Research</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     INTRODUCTION
+══════════════════════════════════════════════ -->
+<section class="intro" id="intro">
+  <div class="container">
+    <div class="intro__grid">
+      <div class="intro__left fade-up">
+        <span class="eyebrow">Why This Project Exists</span>
+        <h2>The problem is no longer just fake media.</h2>
+      </div>
+      <div class="intro__right fade-up fd2">
+        <p class="intro__statement">Real media increasingly needs a way to prove that it is real.</p>
+        <p>Generative AI has made it easier than ever to create realistic images, videos and voices. The challenge is no longer only about detecting what is fake — it is increasingly about establishing confidence in what is genuine.</p>
+        <p>VisionX explores technologies that could help analyse these forms of media and understand whether signs of manipulation or synthetic generation are present.</p>
+      </div>
+    </div>
+
+    <!-- Three pillars -->
+    <div class="pillars fade-up fd3">
+      <div class="pillar">
+        <div class="pillar__num">01</div>
+        <h3>Detect</h3>
+        <p>Identify signs of manipulation or synthetic generation in digital media files.</p>
+      </div>
+      <div class="pillar__divider"></div>
+      <div class="pillar">
+        <div class="pillar__num">02</div>
+        <h3>Analyse</h3>
+        <p>Examine visual, temporal, audio and metadata signals for forensic investigation.</p>
+      </div>
+      <div class="pillar__divider"></div>
+      <div class="pillar">
+        <div class="pillar__num">03</div>
+        <h3>Establish Trust</h3>
+        <p>Explore frameworks for building confidence in the authenticity of digital content.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     RESEARCH AREAS
+══════════════════════════════════════════════ -->
+<section class="research" id="research">
+  <div class="container">
+    <div class="section-top fade-up">
+      <span class="eyebrow">What VisionX Explores</span>
+      <h2>Research Areas</h2>
+    </div>
+    <div class="research__list">
+
+      <div class="ra-item fade-up">
+        <div class="ra-item__head">
+          <span class="ra-item__num">01</span>
+          <h3>Deepfake Detection</h3>
+          <span class="badge badge--dim">Not yet started</span>
+        </div>
+        <p>Exploring methods for identifying synthetic or manipulated facial media using computer vision and deep learning techniques applied to image and video sequences.</p>
+        <p class="ra-item__intent">Planned approach: literature review, dataset selection, baseline model experiments.</p>
+      </div>
+
+      <div class="ra-item fade-up fd2">
+        <div class="ra-item__head">
+          <span class="ra-item__num">02</span>
+          <h3>Digital Media Forensics</h3>
+          <span class="badge badge--dim">Not yet started</span>
+        </div>
+        <p>Studying visual, temporal and metadata signals within digital files to understand origin, modification history and chain of custody of media artefacts.</p>
+        <p class="ra-item__intent">Planned approach: metadata extraction tools, format analysis, forensic signal study.</p>
+      </div>
+
+      <div class="ra-item fade-up fd3">
+        <div class="ra-item__head">
+          <span class="ra-item__num">03</span>
+          <h3>Synthetic Media</h3>
+          <span class="badge badge--dim">Not yet started</span>
+        </div>
+        <p>Understanding how AI-generated images, video and audio can be recognised and differentiated from authentic, unmanipulated source content.</p>
+        <p class="ra-item__intent">Planned approach: GAN output analysis, frequency-domain inspection, generative model study.</p>
+      </div>
+
+      <div class="ra-item fade-up">
+        <div class="ra-item__head">
+          <span class="ra-item__num">04</span>
+          <h3>Digital Identity</h3>
+          <span class="badge badge--dim">Not yet started</span>
+        </div>
+        <p>Exploring impersonation, identity consistency and the growing challenge of synthetic identities used to deceive in digital environments.</p>
+        <p class="ra-item__intent">Planned approach: face consistency checks, biometric signal analysis, identity-spoofing case study.</p>
+      </div>
+
+      <div class="ra-item fade-up fd2">
+        <div class="ra-item__head">
+          <span class="ra-item__num">05</span>
+          <h3>Cybersecurity</h3>
+          <span class="badge badge--dim">Not yet started</span>
+        </div>
+        <p>Studying how manipulated media can be used as a vector for fraud, social engineering, targeted deception and identity-based attacks.</p>
+        <p class="ra-item__intent">Planned approach: threat modelling, attack surface analysis, social engineering case studies.</p>
+      </div>
+
+      <div class="ra-item fade-up fd3">
+        <div class="ra-item__head">
+          <span class="ra-item__num">06</span>
+          <h3>Digital Trust</h3>
+          <span class="badge badge--dim">Not yet started</span>
+        </div>
+        <p>Exploring how technology can help establish frameworks for verifying confidence in digital content and building trust in what we see online.</p>
+        <p class="ra-item__intent">Planned approach: provenance tracking concepts, content authentication standards research.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHY THIS MATTERS — flow diagram
+══════════════════════════════════════════════ -->
+<section class="matters" id="matters">
+  <div class="container">
+    <div class="matters__header fade-up">
+      <span class="eyebrow">Why This Matters</span>
+      <h2>Seeing is no longer enough.</h2>
+    </div>
+
+    <div class="flow fade-up fd2">
+      <div class="flow__step">
+        <div class="flow__box">Real World</div>
+        <div class="flow__caption">Event occurs</div>
+      </div>
+      <svg class="flow__arrow" viewBox="0 0 16 40" fill="none"><line x1="8" y1="2" x2="8" y2="32" stroke="currentColor" stroke-width="1.5"/><polyline points="3,26 8,36 13,26" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      <div class="flow__step">
+        <div class="flow__box">Camera / Device</div>
+        <div class="flow__caption">Captured digitally</div>
+      </div>
+      <svg class="flow__arrow" viewBox="0 0 16 40" fill="none"><line x1="8" y1="2" x2="8" y2="32" stroke="currentColor" stroke-width="1.5"/><polyline points="3,26 8,36 13,26" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      <div class="flow__step flow__step--accent">
+        <div class="flow__box">Digital Media</div>
+        <div class="flow__caption">Image · Video · Audio</div>
+      </div>
+      <div class="flow__fork">
+        <svg class="flow__arrow flow__arrow--warn" viewBox="0 0 16 40" fill="none"><line x1="8" y1="2" x2="8" y2="32" stroke="currentColor" stroke-width="1.5"/><polyline points="3,26 8,36 13,26" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <div class="flow__fork-label">AI / Editing / Distribution</div>
+      </div>
+      <div class="flow__step flow__step--warn">
+        <div class="flow__box">Possibly Manipulated</div>
+        <div class="flow__caption">Synthetic · Edited · Altered</div>
+      </div>
+      <svg class="flow__arrow" viewBox="0 0 16 40" fill="none"><line x1="8" y1="2" x2="8" y2="32" stroke="currentColor" stroke-width="1.5"/><polyline points="3,26 8,36 13,26" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      <div class="flow__step">
+        <div class="flow__box">Viewer</div>
+        <div class="flow__caption">Receives · Believes · Acts</div>
+      </div>
+    </div>
+
+    <p class="matters__note fade-up fd3">VisionX explores what signals may help us understand that journey — between capture and consumption.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CYBERSECURITY INTERSECTION
+══════════════════════════════════════════════ -->
+<section class="cyber" id="cyber">
+  <div class="container">
+    <div class="cyber__grid">
+      <div class="cyber__left fade-up">
+        <span class="eyebrow">Cybersecurity Intersection</span>
+        <h2>Media authenticity is becoming a cybersecurity problem.</h2>
+        <p>Traditional cybersecurity protects systems, networks and accounts. Modern threats increasingly involve manipulating what people see, hear and trust.</p>
+        <p>VisionX explores this emerging intersection — where digital media itself becomes the attack vector.</p>
+      </div>
+      <div class="cyber__right fade-up fd2">
+        <div class="threat-web">
+          <!-- Central node -->
+          <div class="tw-center">Digital<br/>Trust</div>
+          <!-- Threat nodes — positioned via CSS custom properties -->
+          <div class="tw-node" style="--a:0deg"><span>Synthetic Media</span></div>
+          <div class="tw-node" style="--a:51deg"><span>Voice Cloning</span></div>
+          <div class="tw-node" style="--a:103deg"><span>Deepfakes</span></div>
+          <div class="tw-node" style="--a:154deg"><span>Identity Theft</span></div>
+          <div class="tw-node" style="--a:206deg"><span>Impersonation</span></div>
+          <div class="tw-node" style="--a:257deg"><span>Social Engineering</span></div>
+          <div class="tw-node" style="--a:309deg"><span>Fake Evidence</span></div>
+          <!-- Lines drawn by JS -->
+          <svg class="tw-svg" id="twSvg" viewBox="0 0 320 320"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     RESEARCH FRAMEWORK
+══════════════════════════════════════════════ -->
+<section class="framework" id="framework">
+  <div class="container">
+    <div class="section-top fade-up">
+      <span class="eyebrow">How the Research May Work</span>
+      <h2>VisionX Research Framework</h2>
+      <p class="section-sub">The following represents a planned research workflow. Implementation is in progress.</p>
+    </div>
+    <div class="fw-steps">
+      <div class="fw-step fade-up">
+        <div class="fw-step__left">
+          <div class="fw-num">01</div>
+          <div class="fw-line"></div>
+        </div>
+        <div class="fw-step__body">
+          <div class="fw-step__top">
+            <h3>Media Input</h3>
+            <span class="badge badge--dim">Planned</span>
+          </div>
+          <p>The system would accept image, video or audio files for examination. Defining supported formats, input constraints and preprocessing pipelines is part of early design work.</p>
+        </div>
+      </div>
+      <div class="fw-step fade-up fd2">
+        <div class="fw-step__left">
+          <div class="fw-num">02</div>
+          <div class="fw-line"></div>
+        </div>
+        <div class="fw-step__body">
+          <div class="fw-step__top">
+            <h3>Signal Examination</h3>
+            <span class="badge badge--dim">Planned</span>
+          </div>
+          <p>Visual, temporal, metadata and audio characteristics would be extracted and examined. Understanding which signals are most meaningful for detecting manipulation is a core research question.</p>
+        </div>
+      </div>
+      <div class="fw-step fade-up fd3">
+        <div class="fw-step__left">
+          <div class="fw-num">03</div>
+          <div class="fw-line"></div>
+        </div>
+        <div class="fw-step__body">
+          <div class="fw-step__top">
+            <h3>Model Analysis</h3>
+            <span class="badge badge--dim">Planned</span>
+          </div>
+          <p>Machine learning models would be applied to identify patterns associated with manipulation or synthetic generation. Model selection, training data and evaluation methodology are yet to be determined.</p>
+        </div>
+      </div>
+      <div class="fw-step fade-up">
+        <div class="fw-step__left">
+          <div class="fw-num">04</div>
+        </div>
+        <div class="fw-step__body">
+          <div class="fw-step__top">
+            <h3>Interpretation</h3>
+            <span class="badge badge--dim">Planned</span>
+          </div>
+          <p>Signals would be combined into an output that could assist human investigation. How to present findings clearly and honestly — without false certainty — is a key design consideration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PROTOTYPE CONCEPT
+══════════════════════════════════════════════ -->
+<section class="proto-section" id="prototype">
+  <div class="container">
+    <div class="section-top fade-up">
+      <span class="eyebrow">Prototype Concept</span>
+      <h2>Research Interface — Concept Wireframe</h2>
+      <p class="section-sub">This is a visual outline of what a future analysis interface might look like. No code has been written. No analysis runs. This is a design concept only.</p>
+    </div>
+
+    <div class="proto-shell fade-up fd2">
+      <!-- Window chrome -->
+      <div class="proto-chrome">
+        <div class="proto-chrome__dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="proto-chrome__title">
+          <div class="proto-logo-mini">
+            <img src="assets/visionx_logo.jpeg" alt="VisionX" />
+          </div>
+          VisionX — Concept Wireframe
+        </div>
+        <div class="proto-chrome__badge">⚠ Design concept only — not built</div>
+      </div>
+
+      <!-- App layout -->
+      <div class="proto-layout">
+        <!-- Sidebar -->
+        <aside class="proto-sidebar">
+          <div class="ps-group">
+            <div class="ps-label">Input</div>
+            <div class="ps-item ps-item--active">
+              <span class="ps-dot"></span>
+              Media Input
+              <span class="ps-tag ps-tag--dim">Planned</span>
+            </div>
+          </div>
+          <div class="ps-group">
+            <div class="ps-label">Analysis Modules</div>
+            <div class="ps-item">
+              <span class="ps-dot"></span>
+              Visual Analysis
+              <span class="ps-tag ps-tag--dim">Planned</span>
+            </div>
+            <div class="ps-item">
+              <span class="ps-dot"></span>
+              Frame Analysis
+              <span class="ps-tag ps-tag--dim">Planned</span>
+            </div>
+            <div class="ps-item">
+              <span class="ps-dot"></span>
+              Metadata Inspection
+              <span class="ps-tag ps-tag--dim">Planned</span>
+            </div>
+            <div class="ps-item">
+              <span class="ps-dot"></span>
+              Audio Analysis
+              <span class="ps-tag ps-tag--dim">Planned</span>
+            </div>
+          </div>
+          <div class="ps-group">
+            <div class="ps-label">Signals</div>
+            <div class="ps-item">
+              <span class="ps-dot"></span>
+              Identity Consistency
+              <span class="ps-tag ps-tag--dim">Planned</span>
+            </div>
+            <div class="ps-item">
+              <span class="ps-dot"></span>
+              Source Signals
+              <span class="ps-tag ps-tag--dim">Planned</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main canvas -->
+        <main class="proto-main">
+          <!-- Drop zone -->
+          <div class="proto-dropzone">
+            <div class="proto-dropzone__inner">
+              <svg viewBox="0 0 48 48" fill="none" width="40" height="40"><rect x="4" y="8" width="40" height="32" rx="3" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M24 20 L24 32 M18 26 L24 20 L30 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>Media input area — to be implemented</span>
+            </div>
+            <div class="proto-scanline"></div>
+          </div>
+
+          <!-- Placeholder signal area -->
+          <div class="proto-signals">
+            <div class="proto-signal-title">Signal Output Area — placeholder layout</div>
+            <div class="proto-placeholder-rows">
+              <div class="proto-ph-row"><span class="proto-ph-label">Compression Artefacts</span><div class="proto-ph-bar"></div><span class="proto-ph-tag">—</span></div>
+              <div class="proto-ph-row"><span class="proto-ph-label">Temporal Consistency</span><div class="proto-ph-bar"></div><span class="proto-ph-tag">—</span></div>
+              <div class="proto-ph-row"><span class="proto-ph-label">Metadata Integrity</span><div class="proto-ph-bar"></div><span class="proto-ph-tag">—</span></div>
+              <div class="proto-ph-row"><span class="proto-ph-label">Frequency Distribution</span><div class="proto-ph-bar"></div><span class="proto-ph-tag">—</span></div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!-- Footer bar -->
+      <div class="proto-footer">
+        <span>⚠ Design concept only. No analysis functionality exists. All module labels represent intended future work, not completed features.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TECHNOLOGY AREAS
+══════════════════════════════════════════════ -->
+<section class="tech" id="tech">
+  <div class="container">
+    <div class="section-top fade-up">
+      <span class="eyebrow">Under the Hood</span>
+      <h2>Technology Areas</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-cell fade-up"><span>Computer Vision</span></div>
+      <div class="tech-cell fade-up fd2"><span>Deep Learning</span></div>
+      <div class="tech-cell fade-up fd3"><span>Machine Learning</span></div>
+      <div class="tech-cell fade-up fd4"><span>Digital Forensics</span></div>
+      <div class="tech-cell fade-up"><span>Multimedia Analysis</span></div>
+      <div class="tech-cell fade-up fd2"><span>Cybersecurity</span></div>
+      <div class="tech-cell fade-up fd3"><span>Audio Analysis</span></div>
+      <div class="tech-cell fade-up fd4"><span>Metadata Analysis</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ROADMAP
+══════════════════════════════════════════════ -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <div class="section-top fade-up">
+      <span class="eyebrow">Project Timeline</span>
+      <h2>Project Roadmap</h2>
+      <p class="section-sub">VisionX has not yet started development. The roadmap below is the planned path forward.</p>
+    </div>
+
+    <div class="rm-phases">
+      <div class="rm-phase fade-up">
+        <div class="rm-phase__track">
+          <div class="rm-dot rm-dot--next"></div>
+          <div class="rm-line"></div>
+        </div>
+        <div class="rm-phase__body">
+          <div class="rm-phase__kicker">Phase 01 — Starting point</div>
+          <h3>Foundation</h3>
+          <ul>
+            <li>Problem definition &amp; scope</li>
+            <li>Literature review</li>
+            <li>Dataset identification</li>
+            <li>System architecture planning</li>
+          </ul>
+          <span class="badge badge--dim">Not yet started</span>
+        </div>
+      </div>
+
+      <div class="rm-phase fade-up fd2">
+        <div class="rm-phase__track">
+          <div class="rm-dot"></div>
+          <div class="rm-line"></div>
+        </div>
+        <div class="rm-phase__body">
+          <div class="rm-phase__kicker">Phase 02</div>
+          <h3>Prototype</h3>
+          <ul>
+            <li>Initial detection experiments</li>
+            <li>Media preprocessing pipeline</li>
+            <li>Basic interface wireframe</li>
+            <li>Early model testing</li>
+          </ul>
+          <span class="badge badge--dim">Planned</span>
+        </div>
+      </div>
+
+      <div class="rm-phase fade-up fd3">
+        <div class="rm-phase__track">
+          <div class="rm-dot"></div>
+          <div class="rm-line"></div>
+        </div>
+        <div class="rm-phase__body">
+          <div class="rm-phase__kicker">Phase 03</div>
+          <h3>Advanced Development</h3>
+          <ul>
+            <li>Additional media signal types</li>
+            <li>Video analysis pipeline</li>
+            <li>Audio analysis integration</li>
+            <li>Model evaluation &amp; iteration</li>
+          </ul>
+          <span class="badge badge--dim">Planned</span>
+        </div>
+      </div>
+
+      <div class="rm-phase fade-up fd4">
+        <div class="rm-phase__track">
+          <div class="rm-dot"></div>
+        </div>
+        <div class="rm-phase__body">
+          <div class="rm-phase__kicker">Phase 04 — End goal</div>
+          <h3>Final System</h3>
+          <ul>
+            <li>System integration</li>
+            <li>Full evaluation</li>
+            <li>Reporting &amp; documentation</li>
+            <li>Final presentation</li>
+          </ul>
+          <span class="badge badge--dim">Planned</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Semester Cards -->
+    <div class="semesters fade-up fd2">
+      <div class="sem-card sem-card--next">
+        <div class="sem-card__kicker">Semester 7 — Current</div>
+        <h4>Foundation &amp; MVP</h4>
+        <ul>
+          <li>Research &amp; literature review</li>
+          <li>Dataset identification</li>
+          <li>Architecture design</li>
+          <li>Initial model experiments</li>
+          <li>Basic prototype</li>
+        </ul>
+      </div>
+      <div class="sem-arrow">→</div>
+      <div class="sem-card">
+        <div class="sem-card__kicker">Semester 8 — Ahead</div>
+        <h4>Advanced Development &amp; Evaluation</h4>
+        <ul>
+          <li>Improved detection pipeline</li>
+          <li>Multiple media signal types</li>
+          <li>Model evaluation</li>
+          <li>Interface refinement</li>
+          <li>Final system &amp; presentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     INSIGHTS
+══════════════════════════════════════════════ -->
+<section class="insights" id="insights">
+  <div class="container">
+    <div class="section-top fade-up">
+      <span class="eyebrow">VisionX Insights</span>
+      <h2>Research &amp; Editorial</h2>
+    </div>
+    <div class="insights-grid">
+      <article class="ins-card ins-card--featured fade-up">
+        <span class="ins-cat">Digital Evidence</span>
+        <h3>The Camera Used to Be Proof</h3>
+        <p>How synthetic media is changing the nature of digital evidence — and what that means for journalism, law and trust.</p>
+        <span class="ins-link">Coming soon →</span>
+      </article>
+      <article class="ins-card fade-up fd2">
+        <span class="ins-cat">Audio Forensics</span>
+        <h3>When a Voice Can Be Copied</h3>
+        <p>The cybersecurity implications of voice cloning and how audio synthesis is evolving faster than detection methods.</p>
+        <span class="ins-link">Coming soon →</span>
+      </article>
+      <article class="ins-card fade-up fd3">
+        <span class="ins-cat">Authenticity</span>
+        <h3>The Authenticity Problem</h3>
+        <p>Why real digital content may increasingly need verification — and the technical challenges of building that infrastructure.</p>
+        <span class="ins-link">Coming soon →</span>
+      </article>
+      <article class="ins-card fade-up fd4">
+        <span class="ins-cat">Identity &amp; Fraud</span>
+        <h3>Deepfakes Beyond Social Media</h3>
+        <p>How synthetic media affects identity verification, financial fraud and cybersecurity beyond viral content.</p>
+        <span class="ins-link">Coming soon →</span>
+      </article>
+      <article class="ins-card fade-up">
+        <span class="ins-cat">AI Detection</span>
+        <h3>Can AI Detect AI?</h3>
+        <p>Understanding the fundamental challenges of using machine learning to identify machine-generated content.</p>
+        <span class="ins-link">Coming soon →</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__left fade-up">
+        <span class="eyebrow">About VisionX</span>
+        <h2>About VisionX</h2>
+        <p>VisionX is an academic technology project exploring digital media authenticity and the growing challenge of synthetic and manipulated content.</p>
+        <p>The project brings together ideas from artificial intelligence, computer vision, digital forensics and cybersecurity to investigate how digital media may be analysed for signs of manipulation or synthetic generation.</p>
+        <p>VisionX is currently being developed as part of an academic final-year project.</p>
+        <div class="about__chips">
+          <span>AI Research</span>
+          <span>Computer Vision</span>
+          <span>Digital Forensics</span>
+          <span>Cybersecurity</span>
+          <span>Academic Project</span>
+        </div>
+      </div>
+      <div class="about__right fade-up fd3">
+        <div class="about-diagram">
+          <div class="abdia-center">VisionX</div>
+          <div class="abdia-node abdia-node--top">Artificial Intelligence</div>
+          <div class="abdia-node abdia-node--right">Cybersecurity</div>
+          <div class="abdia-node abdia-node--bottom">Digital Forensics</div>
+          <div class="abdia-node abdia-node--left">Computer Vision</div>
+          <svg class="abdia-svg" viewBox="0 0 280 280" fill="none" id="abdiaSvg">
+            <line class="abdia-line" x1="140" y1="140" x2="140" y2="45"/>
+            <line class="abdia-line" x1="140" y1="140" x2="235" y2="160"/>
+            <line class="abdia-line" x1="140" y1="140" x2="140" y2="235"/>
+            <line class="abdia-line" x1="140" y1="140" x2="45" y2="160"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════════ -->
+<section class="cta-final">
+  <div class="container">
+    <div class="cta-final__inner fade-up">
+      <p class="cta-final__kicker">The Central Question</p>
+      <h2 class="cta-final__h2">Can you trust<br />what you see?</h2>
+      <p class="cta-final__sub">VisionX is exploring what technology can do about that question.</p>
+      <div class="cta-final__btns">
+        <a href="#overview" class="btn-primary">Explore the Project</a>
+        <a href="#research" class="btn-ghost">View Research Areas</a>
+      </div>
+      <div class="cta-final__logo">
+        <div class="cta-logo-wrap">
+          <img src="assets/visionx_logo.jpeg" alt="VisionX" />
+        </div>
+        <span>VisionX</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo-wrap">
+          <img src="assets/visionx_logo.jpeg" alt="VisionX" />
+        </div>
+        <div class="footer__brand-text">
+          <span class="footer__name">VisionX</span>
+          <span class="footer__desc">Digital Media Authenticity &amp; Trust Research</span>
+        </div>
+      </div>
+      <nav class="footer__nav">
+        <a href="#overview">Overview</a>
+        <a href="#research">Research</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#insights">Insights</a>
+        <a href="#about">About</a>
+        <a href="https://instagram.com/visionxsystems" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="VisionX on Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+          visionxsystems
+        </a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <span>© VisionX — Digital Media Authenticity &amp; Trust Research</span>
+      <span class="footer__note">Academic project currently under development.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
