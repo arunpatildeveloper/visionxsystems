@@ -185,6 +185,7 @@ section, footer { position: relative; z-index: 1; }
   align-items: center;
   padding: 100px 0 80px;
   overflow: hidden;
+  background: var(--bg);
   border-bottom: 1px solid rgba(108, 60, 233, 0.15);
 }
 
@@ -347,6 +348,7 @@ section, footer { position: relative; z-index: 1; }
 ════════════════════════════════════════════════ */
 .progress {
   padding: 100px 0;
+  background: var(--bg);
   border-bottom: 1px solid rgba(108, 60, 233, 0.12);
 }
 
@@ -452,6 +454,7 @@ section, footer { position: relative; z-index: 1; }
 ════════════════════════════════════════════════ */
 .research {
   padding: 100px 0;
+  background: var(--bg);
   border-bottom: 1px solid rgba(108, 60, 233, 0.12);
 }
 

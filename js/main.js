@@ -17,8 +17,15 @@
       e.target.classList.add('in');
       io.unobserve(e.target);
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
   document.querySelectorAll('.fade-up').forEach(function (el) { io.observe(el); });
+
+  /* Fallback: if anything is still hidden after 3s, reveal it */
+  setTimeout(function () {
+    document.querySelectorAll('.fade-up:not(.in)').forEach(function (el) {
+      el.classList.add('in');
+    });
+  }, 3000);
 
   /* ── Hero tagline ─────────────────────────── */
   var tagline = document.querySelector('.hero__tagline');
